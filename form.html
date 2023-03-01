@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        NAME <br>
+        <input type="text" name="name"><br><br>
+        PASSWORD <br>
+        <input type="text" name="password"><br><br>
+        Gender <br>
+        <input type="radio" name="gender" checked>MALE
+        <input type="radio" name="gender">FEMALE
+    </form><br><br><br>
+
+
+    <form action="#" method="POST" target="_blank">  <!-- OR METHOD GET -->
+        <fieldset style="width: 200px;">
+            <legend>Personal Information</legend>
+            NAME<br>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name"><br><br>
+            PASSWORD<br>
+            <input type="password" name="password" id="password" placeholder="Enter Your password"><br><br>
+            <input type="submit" value="Submit">            
+        </fieldset>
+    </form>
+    <!-- The action attribute defines the action to be performed when the form is submitted. -->
+httP METHODS
+    GET
+    <!-- When to Use GET?
+The default method when submitting form data is GET.
+
+However, when GET is used, the submitted form data will be visible in the page address field:
+
+/action_page.php?firstname=Mickey&lastname=Mouse
+Notes on GET:
+
+Appends form-data into the URL in name/value pairs
+The length of a URL is limited (2048 characters)
+Never use GET to send sensitive data! (will be visible in the URL)
+Useful for form submissions where a user wants to bookmark the result
+GET is better for non-secure data, like query strings in Google -->
+
+POST
+<!-- When to Use POST?
+Always use POST if the form data contains sensitive or personal information. The POST method does not display the submitted form data in the page address field.
+
+Notes on POST:
+
+POST has no size limitations, and can be used to send large amounts of data.
+Form submissions with POST cannot be bookmarked -->
+
+
+NAME
+<!-- Each input field must have a name attribute to be submitted.
+
+If the name attribute is omitted, the data of that input field will not be sent at all. -->
+
+<form action="/action_page.php">
+    <input list="browser" name="browser">
+    <datalist id="browsers">
+      <option value="Internet Explorer"></option>
+      <option value="Firefox"></option>
+      <option value="Chrome"></option>
+      <option value="Opera"></option>
+      <option value="Safari"></option>
+    </datalist>
+    <input type="submit">
+</form>
+
+</body>
+</html>
+
+
